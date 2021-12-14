@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/css/invitation.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Invitation Socket Chat</title>
+</head>
+<body>
+    
+    <div class='home-box'>
+        <h1> Socket Chat !</h1>
+        <h2>Tu as été invité à rejoindre le salon :</h2>
+        <h1 id='invite-room-name'></h1>
+        <form action="/chat" method="get" class= 'home-form' id='home-form'>
+            
+
+            <input type="text" name="room" hidden id="room-hidden-input">
+            <label for="pseudo">Pseudonyme : </label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Entre un pseudo !">
+            <label for="color">Couleur : </label>
+            <input name ='color' id='color' type="color">
+            <button type="submit" class=''>Entrer dans le chat !</button>
+            
+        <form>
+    </div>
+    <script>
+        window.onload = () => {
+            
+            document.getElementById("pseudo").value = localStorage.getItem("username");
+            document.getElementById("color").value = localStorage.getItem("color");
+            document.getElementById('room-hidden-input').value = window.location.href.substring(window.location.href.lastIndexOf('/') + 1)
+            document.getElementById('invite-room-name').innerText = window.location.href.substring(window.location.href.lastIndexOf('/') + 1)
+
+
+        }
+
+    </script>
+
+
+</body>
+</html>

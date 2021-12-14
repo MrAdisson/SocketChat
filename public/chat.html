@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/css/chat.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>SocketChat</title>
+</head>
+<body>
+<div class='main-container'>
+<div class = 'chat-box-container'>
+
+    <h1> Chat room</h1>
+
+
+    <div class='msginfo'>
+        <div id='msg-box' class='msg-box'>
+        </div>
+
+
+        <div id='info-box'>
+            <h3>Salon :</h3>
+            <div id='room-name'>Nom du salon</div>
+
+            <h3>Online (<span id='online-count'></span>) : </h3>
+            <div id='members-box'>
+        
+            </div>
+
+        </div>
+    </div>
+    <div id = 'send-box' class='send-box'>
+        <form id ='msg-form' action="">
+            <button type="button" id='gif-btn'class='btn gif-btn'>GIF</button>
+            <input type="text" autocomplete="off" name="msg" id="msg-input">
+            <button type="submit" class= 'btn send-btn'><i class="fa fa-paper-plane-o"></i>
+            </button>
+        </form>
+        </button>
+    </div>
+    <button type="button" id='invite-link' class= 'btn'>Lien d'invitation</i>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+<div class='blocker' id='blocker'> </div>
+<div id='gif-modal'>
+    <h3 style='margin:auto;'>GIF</h3>
+
+    <input type="text" name="gif-search" id="gif-search">
+
+    <div id='gif-box'>
+
+    </div>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/gif.js"></script>
+</body>
+</html>

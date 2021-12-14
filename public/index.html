@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/css/chat.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Home</title>
+</head>
+<body>
+
+    
+    <div class='home-box'>
+        <h1> Socket Chat !</h1>
+        <form action="/chat" method="get" class= 'home-form' id='home-form'>
+            
+            <div id='roomchoice-box'>
+            <label for="room">Choisissez votre salon :</label>
+            <select name="room" id='roomselect'> 
+                <option value="Mozart">Mozart</option>
+                <option value="Beethoven">Beethoven</option>
+                <option value="Chopin">Chopin</option>
+            </select>
+            <button type='button'id='customRoomBtn' onclick='preventDefault()'> Créer / rejoindre un salon personnalisé</button>
+            </div>
+            <!-- <label for="room">Choix du salon : </label>
+            <input type="text" name="room" placeholder="room" id='roominputtext'> -->
+            <label for="pseudo">Pseudonyme : </label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Entre un pseudo !">
+            <label for="color">Couleur : </label>
+            <input name ='color' type="color" id='color'>
+            <button type="submit" class=''>Entrer dans le chat !</button>
+            
+        <form>
+    </div>
+
+<script>
+
+document.getElementById("pseudo").value = localStorage.getItem("username");
+document.getElementById("color").value = localStorage.getItem("color");
+
+
+document.getElementById('customRoomBtn').addEventListener('click', (e) =>{
+    e.preventDefault()
+
+    document.getElementById('roomchoice-box').innerHTML = `
+    <label for="room">Nom du salon : </label>
+    <input type="text" name="room" placeholder="Nom de salon personnalisé" id='roominputtext'>
+    <button type='button' onclick='location.reload(true)'> Retour </button>
+
+`
+
+})
+</script>
+
+</body>
+</html>
+

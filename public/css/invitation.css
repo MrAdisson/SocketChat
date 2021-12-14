@@ -1,0 +1,67 @@
+@font-face {
+    font-family: TitiliumWeb;
+    src: url(/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+    font-family: TitiliumWeb;
+    src: url(/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+    font-weight: bold;
+}
+      
+body{
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: TitiliumWeb;
+
+
+}
+
+input, select, button{ 
+    font-family: TitiliumWeb;
+
+}
+
+h1, h2{
+    color: whitesmoke;
+    margin:10px auto;
+}
+
+/* HOME */
+
+.home-box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width:clamp(200px, 90%, 500px);
+    margin:auto;
+    overflow: auto;
+    border-radius: 5px;
+
+}
+
+.home-form{
+    width:80%;
+    padding:40px;
+    background-color: whitesmoke;
+    border:1px solid whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+
+}
+input[type='color']{
+    width:100%;
+}
+
+
+
+/* GIF MODALE */

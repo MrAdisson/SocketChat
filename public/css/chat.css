@@ -1,0 +1,229 @@
+@font-face {
+    font-family: TitiliumWeb;
+    src: url(/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+@font-face {
+    font-family: TitiliumWeb;
+    src: url(/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+    font-weight: bold;
+}
+      
+body{
+    background: #200122;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: TitiliumWeb;
+
+}
+
+input, select, button{ 
+    font-family: TitiliumWeb;
+
+}
+
+.main-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: whitesmoke;
+}
+
+.chat-box-container{
+    width:clamp(150px, 90%, 600px);
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+}
+
+.msg-box{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    width: 100%;
+    border:1px solid whitesmoke;
+    padding: 10px;
+    height: 400px;
+    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px whitesmoke;
+}
+.send-box{
+    width: 100%;
+}
+#msg-form{
+    display: flex;
+
+    margin-top: 15px;
+}
+#msg-form input[type="text"]{
+    font-family: TitiliumWeb;
+
+    width: 100%;
+    border-radius: 5px;
+    border:1px solid whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
+
+}
+#msg-form input[type="text"]:focus{
+    outline-width: 0;
+    box-shadow: 0 0 10px whitesmoke;
+
+}
+
+.btn{
+    border-radius: 5px;
+    padding:8px 8px;
+    border: none;
+    background-color:whitesmoke;
+
+
+}
+.send-btn{
+    margin-left: 10px;
+
+}
+.gif-btn{
+    margin-right: 10px;
+
+}
+.btn:hover{
+    color:cadetblue
+}
+
+#info-box{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    width: 150px;
+    max-width: 150px;    
+    height: 400px;
+    border:1px solid whitesmoke;
+    padding: 10px;
+    margin-left: 10px;
+    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px whitesmoke;
+
+}
+
+#members-box div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+
+.msginfo{
+    width:100%;
+    display: flex;
+}
+
+#invite-link{
+    margin-top:20px;
+}
+
+
+/* HOME */
+
+.home-box{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width:clamp(200px, 90%, 500px);
+    margin:auto;
+    overflow: auto;
+    border-radius: 5px;
+
+}
+
+.home-form{
+    width:80%;
+    padding:40px;
+    background-color: whitesmoke;
+    border:1px solid whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+
+}
+input[type='color']{
+    width:100%;
+}
+
+#roomchoice-box{
+    display: flex;
+    flex-direction: column;
+}
+
+/* GIF MODALE */
+
+#gif-modal{
+
+    display:none;
+    position:absolute;
+    flex-direction:column;
+    align-items:center;
+    padding:10px;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(186, 186, 186, 0.908);
+    max-width: 80%;
+    border: 3px solid black;
+    border-radius: 15px;
+    max-height: 300px;
+    width:clamp(200px, 90%, 500px);
+
+}
+
+#gif-box{
+    min-height: 150px;
+    max-height: 150px;
+    overflow: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.gif-elem{
+    margin:2px;
+    border:1px solid black;
+}
+
+.gif-chat-img{
+    max-width: 200px;
+    border:1px solid black;
+    border-radius: 3px;
+}
+
+.blocker{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-color:rgb(0 0 0 / 84%);
+    display:none;
+}
+
+#gif-search{
+    font-family: TitiliumWeb;
+
+    width: 90%;
+    border-radius: 5px;
+    border:1px solid whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
+    box-sizing: border-box;
+}
